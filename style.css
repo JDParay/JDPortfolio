@@ -11,7 +11,7 @@ body {
 header {
 	background-color: #dce3d3;
 	text-align: center;
-	margin-bottom: 30px;
+	padding: 100px 20px;
 }
 
 #profile-img {
@@ -20,10 +20,39 @@ header {
 }
 
 button {
-	background-color: #697855; 
-	padding: 10px 20px;
-	margin-top: 10px;
-	cursor: pointer;
+	padding: 15px 30px;
+  	font-size: 1rem;
+  	background-color: #697855;
+  	color: white;
+  	border: none;
+  	border-radius: 5px;
+ 	cursor: pointer;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+}
+
+.feature-card {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  background: #dce3d3;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.feature-card p {
+  text-align: justify;
+  font-size: 18px;
+}
+
+.feature-card h3 {
+  font-family: FarmFresh;
+  font-size: 24px;
 }
 
 /* Dark Theme */
