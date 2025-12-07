@@ -16,7 +16,8 @@ body {
 .pfp-container {
    width: 200px;
    height: 200px;
-   flex-shrink: 0; 
+   flex-shrink: 0;
+}
 
 #profile-img {
    width: 100%;
