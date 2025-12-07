@@ -55,23 +55,36 @@ button:hover {
 .card-grid {
    display: flex;
    justify-content: center;
-   gap: 20px;
+   gap: 30px;
    padding: 20px 40px;
+   flex-wrap: wrap; /* Helps on smaller screens */
 }
 
+/* Bigger, more square cards */
 .card {
-   width: 30%;
-   background: #987554; /* Card background */
-   padding: 40px 20px;
+   width: 280px;            /* fixed width */
+   height: 280px;           /* makes it square */
+   background: #987554;     /* card background */
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    text-align: center;
-   border-radius: 10px;
+   border-radius: 15px;
    font-weight: bold;
    cursor: pointer;
    transition: 0.3s;
-   background-size: cover;
+   background-size: contain;   /* makes the PNG fit better */
+   background-repeat: no-repeat;
    background-position: center;
-   color: #BF9E7E; /* Font color */
+   color: #BF9E7E;         /* font color */
 }
+
+/* Hover → Show PNG */
+.card:hover {
+   color: transparent;
+}
+
 
 /* Hover → Show PNG */
 .card:hover {
