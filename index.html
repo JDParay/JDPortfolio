@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>My Student Portfolio</title>
-      <link rel="stylesheet" href="style.css">
-      <link href="FarmFresh.otf" rel="stylesheet">
-   </head>
-   <body>
-      <header>
-         <h1 id="name"><b>Jeko Damiel C. Paray</b></h1>
-         <h3 id="nickname"><b><i>He/Him - 21 - Philippines</i></b></h3>
-         <img src="pfp.png" alt="Profile Picture" id="profile-img">
-         <p id="course-year">BS Entertainment and Multimedia Computing - 3rd Year</p>
-         <br>
-         <button id="theme-toggle">Switch Theme</button>
-         <br>
-         <br>
-         <button onclick="window.location.href='https://jdparay.github.io/FreshSense';">FreshSense</button>
-      </header>
-      <section class="flex">
-         <div class="flex-card">
-         <h2><i>Achievements/Certifications</i></h2>
-         <ul>
-            <li>Rank #49 on B1T Jam 2 (2025)</li>
-            <li>Boyscout of the Year (2017-2018)</li>
-            <li>Valedictorian (2015-2016)</li>
-         </ul>
-            </div>
-         <div class="flex-card">
-         <h2><i>Previous Projects</i></h2>
-         <ul>
-            <li><a href="https://github.com/oatlord/GameProg2_Werewolf" target="_blank">Werewolf is I</a></li>
-            <li><a href="https://github.com/AngraAltair/3d-Horror-game.git" target="_blank">Mother of my Mother</a></li>
-            <li><a href="https://imjustjd.itch.io/jack-and-the-growing-beanstalk" target="_blank">Jack and the Growing Beanstalk</a></li>
-         </ul>
-            </div>
-      </section>
-      <script src="script.js"></script>
-   </body>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My Student Portfolio</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+   <div class="pfp-container">
+      <img src="pfp.png" id="profile-img" alt="Profile Picture">
+   </div>
+
+   <div class="info-container">
+      <h1 id="name"><b>Jeko Damiel C. Paray</b></h1>
+      <h3 id="nickname"><b><i>He/Him – 21</i></b></h3>
+      <p><b>BS Entertainment and Multimedia Computing – 3rd Year</b></p>
+      <p><b>Philippines</b></p>
+      <p>Email: <a href="mailto:yourEmail@gmail.com">yourEmail@gmail.com</a></p>
+      <p>Phone: 09XX-XXX-XXXX</p>
+
+      <button onclick="window.location.href='https://jdparay.github.io/FreshSense';">
+         FreshSense
+      </button>
+   </div>
+</header>
+
+<section class="section-title">
+   <h2>Achievements</h2>
+</section>
+
+<section class="card-grid">
+   <div class="card ach1">Rank #49 on B1T Jam 2 (2025)</div>
+   <div class="card ach2">Boyscout of the Year (2017–2018)</div>
+   <div class="card ach3">Valedictorian (2015–2016)</div>
+</section>
+
+<section class="section-title">
+   <h2>Previous Projects</h2>
+</section>
+
+<section class="card-grid">
+   <a href="https://github.com/oatlord/GameProg2_Werewolf" class="card proj1" target="_blank">Werewolf is I</a>
+   <a href="https://github.com/AngraAltair/3d-Horror-game.git" class="card proj2" target="_blank">Mother of my Mother</a>
+   <a href="https://imjustjd.itch.io/jack-and-the-growing-beanstalk" class="card proj3" target="_blank">Jack and the Growing Beanstalk</a>
+</section>
+
+</body>
 </html>
