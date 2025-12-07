@@ -1,15 +1,16 @@
 body {
    font-family: Arial, sans-serif;
-   background-color: #F6F6EE;
-   color: #333;
+   background-color: #B99976; /* Body background */
+   color: #BF9E7E; /* Font color */
    margin: 0;
 }
 
+/* Header Layout */
 .hero {
    display: flex;
    align-items: center;
    padding: 40px;
-   background: #dce3d3;
+   background: #987554; /* Header color */
 }
 
 .pfp-container {
@@ -26,21 +27,31 @@ body {
    padding-left: 40px;
 }
 
+/* Button */
 button {
    margin-top: 20px;
    padding: 12px 25px;
-   background-color: #697855;
-   color: white;
+   background-color: #BF9E7E; /* Button BG */
+   color: #442F1E; /* Dark text for contrast */
    border: none;
    border-radius: 6px;
    cursor: pointer;
+   font-weight: bold;
+   transition: 0.3s ease;
 }
 
+button:hover {
+   background-color: #d8bda2; /* Slightly lighter */
+}
+
+/* Section Headers */
 .section-title {
    text-align: center;
    margin-top: 50px;
+   color: #442F1E; /* Strong readable text */
 }
 
+/* Card Grid */
 .card-grid {
    display: flex;
    justify-content: center;
@@ -50,7 +61,7 @@ button {
 
 .card {
    width: 30%;
-   background: #dce3d3;
+   background: #987554; /* Card background */
    padding: 40px 20px;
    text-align: center;
    border-radius: 10px;
@@ -59,20 +70,25 @@ button {
    transition: 0.3s;
    background-size: cover;
    background-position: center;
+   color: #BF9E7E; /* Font color */
 }
 
+/* Hover → Show PNG */
 .card:hover {
    color: transparent;
 }
 
+/* Achievements Hover Images */
 .ach1:hover { background-image: url("B1TJam.png"); }
 .ach2:hover { background-image: url("BoyScout.png"); }
 .ach3:hover { background-image: url("Valedictorian.png"); }
 
+/* Projects Hover Images */
 .proj1:hover { background-image: url("Werewolf.png"); }
 .proj2:hover { background-image: url("MotherGame.png"); }
 .proj3:hover { background-image: url("Beanstalk.png"); }
 
+/* Remove underline for links */
 .card-grid a {
    text-decoration: none;
    color: inherit;
