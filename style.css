@@ -62,9 +62,10 @@ button:hover {
 
 /* Bigger, more square cards */
 .card {
-   width: 280px;            /* fixed width */
-   height: 280px;           /* makes it square */
-   background: #987554;     /* card background */
+   position: relative;
+   width: 280px;
+   height: 280px;
+   background: #987554;
    padding: 20px;
    display: flex;
    justify-content: center;
@@ -73,33 +74,41 @@ button:hover {
    border-radius: 15px;
    font-weight: bold;
    cursor: pointer;
-   transition: 0.3s;
-   background-size: contain;   /* makes the PNG fit better */
+   overflow: hidden;
+   color: #BF9E7E;
+   transition: color 0.4s ease; /* fade out text */
+}
+
+/* The image layer */
+.card::after {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
-   color: #BF9E7E;         /* font color */
+   opacity: 0; /* start invisible */
+   transition: opacity 0.4s ease; /* fade in */
 }
 
-/* Hover → Show PNG */
+/* fade image in & fade text out */
 .card:hover {
    color: transparent;
 }
 
-
-/* Hover → Show PNG */
-.card:hover {
-   color: transparent;
+.card:hover::after {
+   opacity: 1;
 }
 
-/* Achievements Hover Images */
-.ach1:hover { background-image: url("B1TJam.png"); }
-.ach2:hover { background-image: url("BoyScout.png"); }
-.ach3:hover { background-image: url("Valedictorian.png"); }
+/* Assign your images here */
+.ach1::after { background-image: url("B1TJam.png"); }
+.ach2::after { background-image: url("BoyScout.png"); }
+.ach3::after { background-image: url("Valedictorian.png"); }
 
-/* Projects Hover Images */
-.proj1:hover { background-image: url("Werewolf.png"); }
-.proj2:hover { background-image: url("MotherGame.png"); }
-.proj3:hover { background-image: url("Beanstalk.png"); }
+.proj1::after { background-image: url("Werewolf.png"); }
+.proj2::after { background-image: url("MotherGame.png"); }
+.proj3::after { background-image: url("Beanstalk.png"); }
+
 
 /* Remove underline for links */
 .card-grid a {
