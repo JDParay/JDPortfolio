@@ -1,83 +1,87 @@
-/* Default Light Theme */
 body {
-	text-align: center;
-	font-family: Arial, sans-serif;
-	background-color: #F6F6EE;
-	color: #333;
-	margin: 0;
-	padding: 20px;
+   font-family: Arial, sans-serif;
+   background-color: #F6F6EE;
+   color: #333;
+   margin: 0;
 }
 
-header {
-	background-color: #dce3d3;
-	text-align: center;
-	padding: 100px 20px;
-	font-family: FarmFresh;
-	font-weight: normal;
+/* Header Layout */
+.hero {
+   display: flex;
+   align-items: center;
+   padding: 40px;
+   background: #dce3d3;
+}
+
+.pfp-container {
+   width: 30%;
 }
 
 #profile-img {
-	width: 150px;
-	border-radius: 50%;
+   width: 100%;
+   border-radius: 20px;
 }
 
+.info-container {
+   width: 70%;
+   padding-left: 40px;
+}
+
+/* Button */
 button {
-	padding: 15px 30px;
-  	font-size: 1rem;
-  	background-color: #697855;
-  	color: white;
-  	border: none;
-  	border-radius: 5px;
- 	cursor: pointer;
+   margin-top: 20px;
+   padding: 12px 25px;
+   background-color: #697855;
+   color: white;
+   border: none;
+   border-radius: 6px;
+   cursor: pointer;
 }
 
-.flex {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px 20px;
+/* Section Headers */
+.section-title {
+   text-align: center;
+   margin-top: 50px;
 }
 
-.flex-card {
-  flex: 1;
-  margin: 0 10px;
-  padding: 20px;
-  background: #dce3d3;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
+/* Card Grid */
+.card-grid {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   padding: 20px 40px;
 }
 
-.flex-card p {
-  text-align: justify;
-  font-size: 18px;
+.card {
+   width: 30%;
+   background: #dce3d3;
+   padding: 40px 20px;
+   text-align: center;
+   border-radius: 10px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: 0.3s;
+   background-size: cover;
+   background-position: center;
 }
 
-.flex-card h2 {
-  font-family: FarmFresh;
-  font-size: 24px;
+/* Hover → Show PNG */
+.card:hover {
+   color: transparent;
 }
 
-/* Dark Theme */
-body.dark {
-	background-color: #121212;
-	color: #f5f5f5;
-}
+/* Achievements Hover Images */
+.ach1:hover { background-image: url("B1TJam.png"); }
+.ach2:hover { background-image: url("BoyScout.png"); }
+.ach3:hover { background-image: url("Valedictorian.png"); }
 
-body.dark header {
-  background-color: #697855;
-}
+/* Projects Hover Images */
+.proj1:hover { background-image: url("Werewolf.png"); }
+.proj2:hover { background-image: url("MotherGame.png"); }
+.proj3:hover { background-image: url("Beanstalk.png"); }
 
-body.dark button {
-  background-color: #dce3d3;
-  color: #000000;
-}
-
-body.dark .flex-card {
-  background-color: #697855;
-  border: 1px solid #444;
-}
-
-body.dark .flex-card h2,
-body.dark .flex-card p {
-  color: #f5f5f5;
+/* Remove underline for links */
+.card-grid a {
+   text-decoration: none;
+   color: inherit;
 }
