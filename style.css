@@ -5,7 +5,6 @@ body {
    margin: 0;
 }
 
-/* Header Layout */
 .hero {
    display: flex;
    align-items: center;
@@ -27,7 +26,6 @@ body {
    padding-left: 40px;
 }
 
-/* Button */
 button {
    margin-top: 20px;
    padding: 12px 25px;
@@ -38,13 +36,11 @@ button {
    cursor: pointer;
 }
 
-/* Section Headers */
 .section-title {
    text-align: center;
    margin-top: 50px;
 }
 
-/* Card Grid */
 .card-grid {
    display: flex;
    justify-content: center;
@@ -65,22 +61,18 @@ button {
    background-position: center;
 }
 
-/* Hover → Show PNG */
 .card:hover {
    color: transparent;
 }
 
-/* Achievements Hover Images */
 .ach1:hover { background-image: url("B1TJam.png"); }
 .ach2:hover { background-image: url("BoyScout.png"); }
 .ach3:hover { background-image: url("Valedictorian.png"); }
 
-/* Projects Hover Images */
 .proj1:hover { background-image: url("Werewolf.png"); }
 .proj2:hover { background-image: url("MotherGame.png"); }
 .proj3:hover { background-image: url("Beanstalk.png"); }
 
-/* Remove underline for links */
 .card-grid a {
    text-decoration: none;
    color: inherit;
