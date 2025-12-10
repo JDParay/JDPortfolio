@@ -9,67 +9,48 @@ body {
    align-items: center;
 }
 
-/* FLOATING CONTACT PANEL */
+/* FLOATING CONTACT PANEL (INDIV BUTTONS) */
 .contact-panel {
    position: fixed;
    top: 20px;
    right: 20px;
-   width: 50px;
-   background: #442F1E;
-   padding: 10px;
-   border-radius: 12px;
    display: flex;
    flex-direction: column;
-   align-items: center;
-   gap: 12px;
+   gap: 20px;
    z-index: 999;
+}
+
+.contact-btn {
+   width: 50px;
+   height: 50px;
+   background: #442F1E;
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    cursor: pointer;
-   transition: width 0.3s ease;
+   transition: transform 0.25s ease;
 }
 
-.contact-panel:hover {
-   width: 260px;
+.contact-btn:hover {
+   transform: scale(1.12);
 }
 
-.contact-panel .panel-expanded {
-   opacity: 0;
-   max-width: 0;
-   overflow: hidden;
-   transition: opacity 0.3s ease, max-width 0.3s ease;
-}
-
-.contact-panel:hover .panel-expanded {
-   opacity: 1;
-   max-width: 250px;
-}
-
-.contact-panel .icon {
+.contact-btn img {
    width: 28px;
    height: 28px;
-   background-size: cover;
 }
 
-/* Icons */
-.github { background-image: url("github.png"); }
-.itch   { background-image: url("itch.png"); }
-.email  { background-image: url("email.png"); }
-.phone  { background-image: url("phone.png"); }
-
-
+/* HERO — stuck to the top width-wise */
 .hero {
-   width: 60%;
+   width: 80%;
    background: #987554;
    padding: 40px 0;
    display: flex;
    justify-content: center;
-   border-radius: 0;
+   border-radius: 0 0 20px 20px; /* bottom rounded only */
    margin: 0;
    box-sizing: border-box;
-}
-
-.hero > .pfp-container,
-.hero > .info-container {
-   max-width: 60%;
 }
 
 .pfp-container {
@@ -82,7 +63,6 @@ body {
 .info-container {
    width: auto;
 }
-
 
 #profile-img {
    width: 100%;
