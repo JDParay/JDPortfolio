@@ -55,32 +55,40 @@ body {
 .email  { background-image: url("email.png"); }
 .phone  { background-image: url("phone.png"); }
 
-/* HERO (Center + 80% Width) */
+
 .hero {
-   display: flex;
-   align-items: center;
-   padding: 40px;
-   background: #987554;
    width: 80%;
-   border-radius: 25px;
-   margin-top: 50px;
+   background: #987554;
+   padding: 40px 0;
+   display: flex;
+   justify-content: center;
+   border-radius: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+.hero > .pfp-container,
+.hero > .info-container {
+   max-width: 80%;
 }
 
 .pfp-container {
    width: 200px;
    height: 200px;
    flex-shrink: 0;
+   margin-right: 40px;
 }
+
+.info-container {
+   width: auto;
+}
+
 
 #profile-img {
    width: 100%;
    height: 100%;
    object-fit: cover;
    border-radius: 20px;
-}
-
-.info-container {
-   padding-left: 40px;
 }
 
 /* ABOUT SECTION */
