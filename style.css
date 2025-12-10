@@ -1,16 +1,69 @@
+/* GENERAL */
 body {
    font-family: Arial, sans-serif;
-   background-color: #B99976; /* Body background */
-   color: #d9b28b; /* Font color */
+   background-color: #B99976;
+   color: #d9b28b;
    margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
-/* Header Layout */
+/* FLOATING CONTACT PANEL */
+.contact-panel {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   width: 50px;
+   background: #442F1E;
+   padding: 10px;
+   border-radius: 12px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 12px;
+   z-index: 999;
+   cursor: pointer;
+   transition: width 0.3s ease;
+}
+
+.contact-panel:hover {
+   width: 260px;
+}
+
+.contact-panel .panel-expanded {
+   opacity: 0;
+   max-width: 0;
+   overflow: hidden;
+   transition: opacity 0.3s ease, max-width 0.3s ease;
+}
+
+.contact-panel:hover .panel-expanded {
+   opacity: 1;
+   max-width: 250px;
+}
+
+.contact-panel .icon {
+   width: 28px;
+   height: 28px;
+   background-size: cover;
+}
+
+/* Icons */
+.github { background-image: url("github.png"); }
+.itch   { background-image: url("itch.png"); }
+.email  { background-image: url("email.png"); }
+.phone  { background-image: url("phone.png"); }
+
+/* HERO (Center + 80% Width) */
 .hero {
    display: flex;
    align-items: center;
    padding: 40px;
-   background: #987554; /* Header color */
+   background: #987554;
+   width: 80%;
+   border-radius: 25px;
+   margin-top: 50px;
 }
 
 .pfp-container {
@@ -27,44 +80,38 @@ body {
 }
 
 .info-container {
-   width: 70%;
    padding-left: 40px;
 }
 
-/* Button */
-button {
-   margin-top: 20px;
-   padding: 12px 25px;
-   background-color: #d9b28b; /* Button BG */
-   color: #442F1E; /* Dark text for contrast */
-   border: none;
-   border-radius: 6px;
-   cursor: pointer;
-   font-weight: bold;
-   transition: 0.3s ease;
+/* ABOUT SECTION */
+.about-section {
+   width: 80%;
+   margin-top: 40px;
+   background: #987554;
+   padding: 30px;
+   border-radius: 20px;
+   color: #442F1E;
+   text-align: center;
 }
 
-button:hover {
-   background-color: #d8bda2; /* Slightly lighter */
-}
-
-/* Section Headers */
+/* SECTION TITLES */
 .section-title {
    text-align: center;
    margin-top: 50px;
-   color: #442F1E; /* Strong readable text */
+   color: #442F1E;
 }
 
-/* Card Grid */
+/* CARD GRID */
 .card-grid {
+   width: 80%;
    display: flex;
    justify-content: center;
    gap: 30px;
-   padding: 20px 40px;
-   flex-wrap: wrap; /* Helps on smaller screens */
+   padding: 20px;
+   flex-wrap: wrap;
 }
 
-/* Bigger, more square cards */
+/* CARDS */
 .card {
    position: relative;
    width: 280px;
@@ -80,10 +127,9 @@ button:hover {
    cursor: pointer;
    overflow: hidden;
    color: #d9b28b;
-   transition: color 0.4s ease; /* fade out text */
+   transition: color 0.4s ease;
 }
 
-/* The image layer */
 .card::after {
    content: "";
    position: absolute;
@@ -91,11 +137,10 @@ button:hover {
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
-   opacity: 0; /* start invisible */
-   transition: opacity 0.4s ease; /* fade in */
+   opacity: 0;
+   transition: opacity 0.4s ease;
 }
 
-/* fade image in & fade text out */
 .card:hover {
    color: transparent;
 }
@@ -104,7 +149,7 @@ button:hover {
    opacity: 1;
 }
 
-/* Assign your images here */
+/* CARD IMAGES */
 .ach1::after { background-image: url("B1TJam.png"); }
 .ach2::after { background-image: url("BoyScout.png"); }
 .ach3::after { background-image: url("Valedictorian.png"); }
@@ -113,9 +158,53 @@ button:hover {
 .proj2::after { background-image: url("MotherGame.png"); }
 .proj3::after { background-image: url("Beanstalk.png"); }
 
-
-/* Remove underline for links */
 .card-grid a {
    text-decoration: none;
    color: inherit;
+}
+
+/* FRESH SENSE SECTION */
+.freshsense {
+   width: 80%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 30px;
+   background: #987554;
+   padding: 40px;
+   margin-top: 50px;
+   border-radius: 20px;
+   position: relative;
+}
+
+.freshsense img {
+   width: 100%;
+   border-radius: 15px;
+}
+
+.freshsense button {
+   position: absolute;
+   right: 40px;
+   bottom: 40px;
+   padding: 12px 25px;
+   background-color: #d9b28b;
+   color: #442F1E;
+   border: none;
+   border-radius: 6px;
+   cursor: pointer;
+   font-weight: bold;
+   transition: 0.3s ease;
+}
+
+.freshsense button:hover {
+   background-color: #e3c5a4;
+}
+
+/* FOOTER */
+footer {
+   margin-top: 80px;
+   padding: 20px;
+   width: 100%;
+   background: #442F1E;
+   text-align: center;
+   color: #d9b28b;
 }
