@@ -151,8 +151,7 @@ body {
    color: inherit;
 }
 
-/* FRESH SENSE SECTION */
-.freshsense {
+.website-onclick {
    width: 60%;
    display: grid;
    grid-template-columns: 1fr 1fr;
