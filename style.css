@@ -163,12 +163,12 @@ body {
    position: relative;
 }
 
-.freshsense img {
+.website-onclick img {
    width: 100%;
    border-radius: 15px;
 }
 
-.freshsense button {
+.website-onclick button {
    position: absolute;
    right: 40px;
    bottom: 40px;
@@ -182,7 +182,7 @@ body {
    transition: 0.3s ease;
 }
 
-.freshsense button:hover {
+.website-onclick button:hover {
    background-color: #e3c5a4;
 }
 
