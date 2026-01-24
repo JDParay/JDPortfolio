@@ -5,86 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JD's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="contact-panel">
-    <a href="https://github.com/JDParay" target="_blank" class="contact-btn"><img src="assets/github.png" alt="GH"></a>
-    <a href="https://imjustjd.itch.io" target="_blank" class="contact-btn"><img src="assets/itch.png" alt="Itch"></a>
-    <a href="mailto:JDParay@mcm.edu.ph" class="contact-btn"><img src="assets/email.png" alt="Email"></a>
-    <a href="tel:09076718159" class="contact-btn"><img src="assets/phone.png" alt="Call"></a>
-</div>
-
-<header class="hero">
-    <div class="hero-content">
-        <div class="pfp-container">
-            <img src="assets/pfp.png" id="profile-img" alt="Profile Picture">
-        </div>
-        <div class="info-container">
-            <h1 id="name">Jeko Damiel C. Paray</h1>
-            <h3 id="nickname">He/Him • 21</h3>
-            <p class="tagline">BS Entertainment and Multimedia Computing – 3rd Year</p>
-        </div>
+<header class="hero-container">
+    <div class="hero-banner"></div>
+    
+    <div class="pfp-wrapper">
+        <img src="assets/pfp.png" alt="JD" class="pfp-circle">
     </div>
+
+    <div class="hero-text">
+        <h1>Jeko Damiel C. Paray</h1>
+        <h3>He/Him • 21</h3>
+        <p>BS Entertainment and Multimedia Computing – 3rd Year</p>
+    </div>
+
+    <div class="social-row">
+        <a href="https://github.com/JDParay" target="_blank"><img src="assets/github.png" alt="GH"></a>
+        <a href="https://imjustjd.itch.io" target="_blank"><img src="assets/itch.png" alt="Itch"></a>
+        <a href="mailto:JDParay@mcm.edu.ph"><img src="assets/email.png" alt="Email"></a>
+        <a href="tel:09076718159"><img src="assets/phone.png" alt="Phone"></a>
+    </div>
+
+    <section class="about-section">
+        <p>I am a man with big dreams, high enough to fly far. <br> 
+        The ideas I create are what I plan to make, to display and show to attain recognition.</p>
+    </section>
 </header>
 
-<section class="about-section">
-    <h2>About Me</h2>
-    <p>I am a man with big dreams, high enough to fly far. <br> The ideas I create are what I plan to make, to display and show to attain recognition and an established reputation.</p>
-</section>
+<hr class="divider">
 
-<nav class="sticky-tabs">
-    <a href="#achievements" class="tab-link">Achievements</a>
-    <span class="tab-separator">|</span>
-    <a href="#projects" class="tab-link">Projects</a>
+<nav class="toggle-nav">
+    <button onclick="showSection('achievements')" id="btn-ach" class="active">Achievements</button>
+    <span class="separator">|</span>
+    <button onclick="showSection('projects')" id="btn-proj">Projects</button>
 </nav>
 
-<div id="achievements" class="anchor-point"></div>
-<section class="section-title"><h2>Achievements</h2></section>
-<section class="card-grid">
-    <div class="card ach1"><div class="card-text">Rank #49 on B1T Jam 2 (2025)</div></div>
-    <div class="card ach2"><div class="card-text">Boyscout of the Year (2017–2018)</div></div>
-    <div class="card ach3"><div class="card-text">Valedictorian (2015–2016)</div></div>
-</section>
-
-<div id="projects" class="anchor-point"></div>
-<section class="section-title"><h2>Previous Projects</h2></section>
-<section class="card-grid">
-    <a href="https://github.com/oatlord/GameProg2_Werewolf" class="card proj1" target="_blank"><div class="card-text">Werewolf is I</div></a>
-    <a href="https://github.com/AngraAltair/3d-Horror-game.git" class="card proj2" target="_blank"><div class="card-text">Mother of my Mother</div></a>
-    <a href="https://imjustjd.itch.io/jack-and-the-growing-beanstalk" class="card proj3" target="_blank"><div class="card-text">Jack and the Growing Beanstalk</div></a>
-</section>
-
-<section class="showcase-container">
-    <div class="showcase-card">
-        <div class="showcase-info">
-            <h2>FreshSense</h2>
-            <p>Protecting Mushroom Farms through the power of digital scent technology.</p>
-        </div>
-        <div class="showcase-actions">
-            <button class="btn-primary" onclick="window.location.href='https://jdparay.github.io/FreshSense';">Visit FreshSense</button>
-        </div>
-    </div>
-
-    <div class="showcase-card">
-        <div class="showcase-info">
-            <h2>M1 F3</h2>
-            <p>Advanced Word Searcher and Word Counter utility.</p>
-        </div>
-        <div class="showcase-actions">
-            <button class="btn-primary" onclick="window.location.href='https://jdparay.github.io/M1FA3';">To Submission</button>
-        </div>
+<section id="achievements" class="content-section">
+    <div class="card-grid">
+        <div class="card ach1"><div class="card-text">Rank #49 on B1T Jam 2 (2025)</div></div>
+        <div class="card ach2"><div class="card-text">Boyscout of the Year (2017–2018)</div></div>
+        <div class="card ach3"><div class="card-text">Valedictorian (2015–2016)</div></div>
     </div>
 </section>
 
-<div class="f2p-trigger">
-    <button class="btn-f2p" onclick="window.location.href='https://YOUR-LINK-HERE.com';">Lead me to Free2Play</button>
-</div>
+<section id="projects" class="content-section" style="display:none;">
+    <div class="card-grid">
+        <a href="https://github.com/oatlord/GameProg2_Werewolf" class="card proj1" target="_blank"><div class="card-text">Werewolf is I</div></a>
+        <a href="https://github.com/AngraAltair/3d-Horror-game.git" class="card proj2" target="_blank"><div class="card-text">Mother of my Mother</div></a>
+        <a href="https://imjustjd.itch.io/jack-and-the-growing-beanstalk" class="card proj3" target="_blank"><div class="card-text">Jack and the Growing Beanstalk</div></a>
+    </div>
+</section>
 
-<footer>
-    <p>Cabantian, Davao City, Philippines</p>
-</footer>
+<hr class="divider">
+
+<section class="websites-section">
+    <h2>Websites</h2>
+    <div class="web-button-row">
+        <button class="sq-btn" onclick="window.location.href='https://jdparay.github.io/FreshSense';">FreshSense</button>
+        <button class="sq-btn" onclick="window.location.href='https://jdparay.github.io/M1FA3';">M1 F3</button>
+        <button class="sq-btn" onclick="window.location.href='https://api-website-summative-paray.vercel.app';">Free2Play</button>
+    </div>
+</section>
+
+<footer>Cabantian, Davao City, Philippines</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all
+        document.getElementById('achievements').style.display = 'none';
+        document.getElementById('projects').style.display = 'none';
+        
+        // Show selected
+        document.getElementById(sectionId).style.display = 'block';
+
+        // Toggle button states
+        document.getElementById('btn-ach').classList.toggle('active', sectionId === 'achievements');
+        document.getElementById('btn-proj').classList.toggle('active', sectionId === 'projects');
+    }
+</script>
 
 </body>
 </html>
