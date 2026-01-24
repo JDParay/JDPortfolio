@@ -7,7 +7,6 @@
     --text-dark: #2A1B0E;   
 }
 
-/* --- BASE & BACKGROUND --- */
 body {
     background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-dark) 100%);
     background-attachment: fixed;
@@ -17,7 +16,7 @@ body {
     text-align: center;
     position: relative;
     overflow-x: hidden;
-    line-height: 1.6; /* Increased for spaciousness */
+    line-height: 2;
 }
 
 body::before {
@@ -32,12 +31,11 @@ body::before {
     background-repeat: repeat;
     background-size: 150px; 
     transform: rotate(-15deg); 
-    opacity: 0.12; /* Slightly softer to let content breathe */
+    opacity: 0.1; 
     background-blend-mode: soft-light;
     pointer-events: none; 
 }
 
-/* --- TYPOGRAPHY --- */
 h1, h2, .toggle-nav button.active {
     background: linear-gradient(to bottom, #442F1E 20%, #2A1B0E 100%);
     -webkit-background-clip: text;
@@ -46,11 +44,10 @@ h1, h2, .toggle-nav button.active {
     letter-spacing: 1px;
 }
 
-h1 { font-size: 2.5rem; margin-bottom: 5px; }
+h1 { font-size: 2.5rem; margin: 20px 0 5px 0; }
 
-/* --- HERO SECTION --- */
 .hero-container {
-    padding-bottom: 60px; /* Spaciousness */
+    padding-bottom: 40px;
 }
 
 .hero-banner {
@@ -96,9 +93,8 @@ h1 { font-size: 2.5rem; margin-bottom: 5px; }
 
 .social-row img:hover { transform: scale(1.2) translateY(-5px); }
 
-/* --- NAVIGATION TABS --- */
 .toggle-nav {
-    margin: 50px 0;
+    margin: 40px 0;
 }
 
 .toggle-nav button {
@@ -112,34 +108,17 @@ h1 { font-size: 2.5rem; margin-bottom: 5px; }
     padding: 10px 20px;
 }
 
-/* --- ANIMATION KEYFRAMES --- */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-in {
-    animation: fadeInUp 0.7s ease forwards;
-}
-
-/* --- CARD GRID --- */
 .card-grid {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 50px; /* Increased gap for a spacious feel */
-    padding: 40px 20px 80px 20px;
+    gap: 50px;
+    padding: 20px 20px 60px 20px;
 }
 
 .card {
-    width: 280px; /* Slightly larger cards */
+    width: 280px;
     height: 280px;
     border-radius: 25px;
     background-size: cover;
@@ -148,13 +127,8 @@ h1 { font-size: 2.5rem; margin-bottom: 5px; }
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
-    opacity: 0; /* Starts hidden for animation */
+    opacity: 1;
 }
-
-/* Staggered Delay for cards */
-.animate-in .card:nth-child(1) { animation-delay: 0.1s; }
-.animate-in .card:nth-child(2) { animation-delay: 0.2s; }
-.animate-in .card:nth-child(3) { animation-delay: 0.3s; }
 
 .card:hover {
     transform: translateY(-15px) scale(1.02);
@@ -178,20 +152,24 @@ h1 { font-size: 2.5rem; margin-bottom: 5px; }
 
 .card:hover .card-text { opacity: 1; }
 
-/* --- WEBSITES SECTION --- */
+.websites-section h2 {
+    margin-top: 20px;
+}
+
 .divider { 
-    width: 60%; 
-    height: 1px; 
-    background: rgba(68, 47, 30, 0.2); 
-    border: none; 
-    margin: 60px auto; 
+    width: 70%; 
+    height: 2px; 
+    border: none;
+    background: linear-gradient(90deg, transparent, var(--panel), transparent); 
+    margin: 40px auto;
+    opacity: 0.4;
 }
 
 .web-button-row {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Increased spacing */
-    padding: 40px 20px 100px 20px;
+    gap: 40px;
+    padding: 40px 20px;
 }
 
 .sq-btn {
@@ -215,12 +193,17 @@ h1 { font-size: 2.5rem; margin-bottom: 5px; }
     box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3); 
 }
 
-/* --- ASSET BINDING --- */
+footer { 
+    margin-top: 100px;
+    padding: 60px 20px; 
+    opacity: 0.4; 
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(68, 47, 30, 0.1);
+}
+
 .proj1 { background-image: url("assets/Werewolf.png"); }
 .proj2 { background-image: url("assets/MotherGame.png"); }
 .proj3 { background-image: url("assets/Beanstalk.png"); }
 .ach1 { background-image: url("assets/B1TJam.png"); }
 .ach2 { background-image: url("assets/BoyScout.png"); }
 .ach3 { background-image: url("assets/Valedictorian.png"); }
-
-footer { padding: 80px 20px; opacity: 0.4; font-size: 0.85rem; }
