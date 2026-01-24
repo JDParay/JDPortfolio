@@ -1,95 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>JD's Portfolio</title>
-   <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- FLOATING CONTACT PANEL (individual buttons) -->
 <div class="contact-panel">
-   <a href="https://github.com/JDParay" target="_blank" class="contact-btn">
-      <img src="assets/github.png" alt="GitHub">
-   </a>
-
-   <a href="https://imjustjd.itch.io" target="_blank" class="contact-btn">
-      <img src="assets/itch.png" alt="Itch.io">
-   </a>
-
-   <a href="mailto:JDParay@mcm.edu.ph" class="contact-btn">
-      <img src="assets/email.png" alt="Email">
-   </a>
-
-   <a href="tel:09076718159" class="contact-btn">
-      <img src="assets/phone.png" alt="Phone">
-   </a>
+    <a href="https://github.com/JDParay" target="_blank" class="contact-btn"><img src="assets/github.png" alt="GH"></a>
+    <a href="https://imjustjd.itch.io" target="_blank" class="contact-btn"><img src="assets/itch.png" alt="Itch"></a>
+    <a href="mailto:JDParay@mcm.edu.ph" class="contact-btn"><img src="assets/email.png" alt="Email"></a>
+    <a href="tel:09076718159" class="contact-btn"><img src="assets/phone.png" alt="Call"></a>
 </div>
 
-<!-- HERO (attached to top visually) -->
 <header class="hero">
-   <div class="pfp-container">
-      <img src="assets/pfp.png" id="profile-img" alt="Profile Picture">
-   </div>
-
-   <div class="info-container">
-      <h1 id="name"><b>Jeko Damiel C. Paray</b></h1>
-      <h3 id="nickname"><i>He/Him – 21</i></h3>
-      <p><b>BS Entertainment and Multimedia Computing – 3rd Year</b></p>
-   </div>
+    <div class="hero-content">
+        <div class="pfp-container">
+            <img src="assets/pfp.png" id="profile-img" alt="Profile Picture">
+        </div>
+        <div class="info-container">
+            <h1 id="name">Jeko Damiel C. Paray</h1>
+            <h3 id="nickname">He/Him • 21</h3>
+            <p class="tagline">BS Entertainment and Multimedia Computing – 3rd Year</p>
+        </div>
+    </div>
 </header>
 
-<!-- ABOUT ME -->
 <section class="about-section">
-   <h2>About Me</h2>
-   <p>I am a man with big dreams, high enough to fly far. <br> The ideas I create is what I plan to make, to display and show to attain recognition and an established reputation.</p>
+    <h2>About Me</h2>
+    <p>I am a man with big dreams, high enough to fly far. <br> The ideas I create are what I plan to make, to display and show to attain recognition and an established reputation.</p>
 </section>
 
-<!-- ACHIEVEMENTS -->
+<nav class="sticky-tabs">
+    <a href="#achievements" class="tab-link">Achievements</a>
+    <span class="tab-separator">|</span>
+    <a href="#projects" class="tab-link">Projects</a>
+</nav>
+
+<div id="achievements" class="anchor-point"></div>
 <section class="section-title"><h2>Achievements</h2></section>
-
 <section class="card-grid">
-   <div class="card ach1">Rank #49 on B1T Jam 2 (2025)</div>
-   <div class="card ach2">Boyscout of the Year (2017–2018)</div>
-   <div class="card ach3">Valedictorian (2015–2016)</div>
+    <div class="card ach1"><div class="card-text">Rank #49 on B1T Jam 2 (2025)</div></div>
+    <div class="card ach2"><div class="card-text">Boyscout of the Year (2017–2018)</div></div>
+    <div class="card ach3"><div class="card-text">Valedictorian (2015–2016)</div></div>
 </section>
 
-<!-- PREVIOUS PROJECTS -->
+<div id="projects" class="anchor-point"></div>
 <section class="section-title"><h2>Previous Projects</h2></section>
-
 <section class="card-grid">
-   <a href="https://github.com/oatlord/GameProg2_Werewolf" class="card proj1" target="_blank">Werewolf is I</a>
-   <a href="https://github.com/AngraAltair/3d-Horror-game.git" class="card proj2" target="_blank">Mother of my Mother</a>
-   <a href="https://imjustjd.itch.io/jack-and-the-growing-beanstalk" class="card proj3" target="_blank">Jack and the Growing Beanstalk</a>
+    <a href="https://github.com/oatlord/GameProg2_Werewolf" class="card proj1" target="_blank"><div class="card-text">Werewolf is I</div></a>
+    <a href="https://github.com/AngraAltair/3d-Horror-game.git" class="card proj2" target="_blank"><div class="card-text">Mother of my Mother</div></a>
+    <a href="https://imjustjd.itch.io/jack-and-the-growing-beanstalk" class="card proj3" target="_blank"><div class="card-text">Jack and the Growing Beanstalk</div></a>
 </section>
 
-<!-- FRESH SENSE SHOWCASE -->
-<section class="website-onclick">
-   <div class="fs-left">
-      <h2>FreshSense</h2>
-      <p>The new way to protect Mushroom Farms using the power of smell.</p>
-   </div>
+<section class="showcase-container">
+    <div class="showcase-card">
+        <div class="showcase-info">
+            <h2>FreshSense</h2>
+            <p>Protecting Mushroom Farms through the power of digital scent technology.</p>
+        </div>
+        <div class="showcase-actions">
+            <button class="btn-primary" onclick="window.location.href='https://jdparay.github.io/FreshSense';">Visit FreshSense</button>
+        </div>
+    </div>
 
-   <button onclick="window.location.href='https://jdparay.github.io/FreshSense';">
-      Visit FreshSense
-   </button>
+    <div class="showcase-card">
+        <div class="showcase-info">
+            <h2>M1 F3</h2>
+            <p>Advanced Word Searcher and Word Counter utility.</p>
+        </div>
+        <div class="showcase-actions">
+            <button class="btn-primary" onclick="window.location.href='https://jdparay.github.io/M1FA3';">To Submission</button>
+        </div>
+    </div>
 </section>
 
-<section class="website-onclick">
-   <div class="fs-left">
-      <h2>M1 F3</h2>
-      <p>Word Searcher and Word Counter.</p>
-   </div>
+<div class="f2p-trigger">
+    <button class="btn-f2p" onclick="window.location.href='https://YOUR-LINK-HERE.com';">Lead me to Free2Play</button>
+</div>
 
-   <button onclick="window.location.href='https://jdparay.github.io/M1FA3';">
-      To Submission
-   </button>
-</section>
-
-<!-- FOOTER -->
 <footer>
-   Cabantian, Davao City, Philippines
+    <p>Cabantian, Davao City, Philippines</p>
 </footer>
 
 </body>
