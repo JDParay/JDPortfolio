@@ -16,7 +16,7 @@ body {
     text-align: center;
     position: relative;
     overflow-x: hidden;
-    line-height: 2;
+    line-height: .5;
 }
 
 body::before {
@@ -31,7 +31,7 @@ body::before {
     background-repeat: repeat;
     background-size: 150px; 
     transform: rotate(-15deg); 
-    opacity: 0.1; 
+    opacity: 0.04; 
     background-blend-mode: soft-light;
     pointer-events: none; 
 }
