@@ -1,136 +1,146 @@
 :root {
-    --bg-color: #2A1B0E; /* Darker, richer background */
-    --accent-gold: #D4AF37;
-    --card-bg: #442F1E;
-    --text-main: #f3e5ab;
-    --hero-bg: #3b2a1a;
+    --bg: #2A1B0E;
+    --accent: #D4AF37;
+    --panel: #442F1E;
+    --text: #f3e5ab;
 }
 
 body {
+    background-color: var(--bg);
+    color: var(--text);
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
     margin: 0;
-    scroll-behavior: smooth;
+    text-align: center;
 }
 
-/* HERO UPDATES */
-.hero {
-    width: 100%;
-    background: linear-gradient(180deg, #442F1E 0%, var(--bg-color) 100%);
-    padding: 60px 0;
+/* HERO SECTION */
+.hero-container {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.hero-banner {
+    height: 150px;
+    background: var(--panel);
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+}
+
+.pfp-wrapper {
+    margin-top: -75px;
+}
+
+.pfp-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--accent);
+    object-fit: cover;
+    background: var(--bg);
+}
+
+.hero-text h1 { color: var(--accent); margin: 15px 0 5px; }
+
+.social-row {
     display: flex;
     justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
 }
 
-.hero-content {
-    display: flex;
-    align-items: center;
-    max-width: 1000px;
-}
-
-#name { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 0; color: var(--accent-gold); }
-
-/* STICKY TABS */
-.sticky-tabs {
-    position: sticky;
-    top: 0;
-    background: rgba(68, 47, 30, 0.95);
-    padding: 15px;
-    width: 100%;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    backdrop-filter: blur(5px);
-}
-
-.tab-link {
-    color: var(--accent-gold);
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.social-row img {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
     transition: 0.3s;
 }
 
-.tab-link:hover { color: #fff; }
+.social-row img:hover { transform: scale(1.2); }
 
-/* REVERSED CARDS: PHOTO TO TEXT */
-.card {
-    position: relative;
-    width: 280px;
-    height: 350px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 2px solid var(--accent-gold);
-    transition: transform 0.4s ease;
+/* TOGGLE TABS */
+.toggle-nav {
+    margin: 30px 0;
+    font-size: 1.5rem;
 }
 
-.card:hover { transform: translateY(-10px); }
-
-.card-text {
-    position: absolute;
-    inset: 0;
-    background: rgba(42, 27, 14, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.4s ease;
-}
-
-.card:hover .card-text { opacity: 1; } /* Show text on hover */
-
-/* CARD IMAGES (Default state) */
-.ach1 { background-image: url("assets/B1TJam.png"); }
-.ach2 { background-image: url("assets/BoyScout.png"); }
-.ach3 { background-image: url("assets/Valedictorian.png"); }
-.proj1 { background-image: url("assets/Werewolf.png"); }
-.proj2 { background-image: url("assets/MotherGame.png"); }
-.proj3 { background-image: url("assets/Beanstalk.png"); }
-
-/* SHOWCASE SECTION */
-.showcase-container {
-    width: 80%;
-    margin: 50px auto;
-}
-
-.showcase-card {
-    background: var(--card-bg);
-    border-left: 5px solid var(--accent-gold);
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.btn-primary, .btn-f2p {
-    padding: 12px 25px;
-    background: var(--accent-gold);
-    color: #000;
+.toggle-nav button {
+    background: none;
     border: none;
-    border-radius: 5px;
+    color: #888;
+    font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.btn-f2p {
-    background: #fff;
-    font-size: 1.2rem;
-    padding: 20px 40px;
+.toggle-nav button.active { color: var(--accent); }
+
+.separator { margin: 0 15px; color: var(--panel); }
+
+.card-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
 }
 
-.f2p-trigger {
-    text-align: center;
-    margin: 50px 0;
+.card {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--panel);
+    position: relative;
+    overflow: hidden;
 }
 
-.anchor-point { padding-top: 80px; }
+.card-text {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.card:hover .card-text { opacity: 1; }
+
+/* WEBSITES SECTION */
+.divider { width: 80%; border: 1px solid var(--panel); margin: 40px auto; }
+
+.web-button-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sq-btn {
+    width: 150px;
+    height: 150px;
+    background: var(--panel);
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sq-btn:hover { background: var(--accent); color: var(--bg); }
+
+.proj1 { background-image: url("assets/Werewolf.png"); }
+.proj2 { background-image: url("assets/MotherGame.png"); }
+.proj3 { background-image: url("assets/Beanstalk.png"); }
+
+.ach1 { background-image: url("assets/B1TJam.png"); }
+.ach2 { background-image: url("assets/BoyScout.png"); }
+.ach3 { background-image: url("assets/Valedictorian.png"); }
+
+footer { padding: 40px; opacity: 0.6; }
