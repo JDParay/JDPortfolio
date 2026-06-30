@@ -32,8 +32,7 @@
     <section class="about-section">
         <p>I am a man with big dreams, high enough to fly far. <br> 
         The ideas I create are what I plan to make, to display and show to attain recognition.</p>
-    </section>
-    <div class="skills-section">
+        <div class="skills-section">
   <div class="skill-group">
     <p class="skill-group-label">Tools I use</p>
     <div class="skill-tags">
@@ -55,6 +54,7 @@
     </div>
   </div>
 </div>
+    </section>
 </header>
 
 <hr class="divider">
@@ -67,6 +67,46 @@
 
 <section id="achievements" class="content-section">
     <div class="achievement-card">
+  <div class="achievement-icon">🏆</div>
+  <div class="achievement-body">
+    <p class="achievement-title">Rank #49 — B1T Jam 2</p>
+    <p class="achievement-desc">Placed 49th out of hundreds of entries in a competitive game jam, 2025.</p>
+  </div>
+  <a href="YOUR_CERT_LINK_HERE" target="_blank" class="cert-btn">View cert</a>
+</div>
+<div class="achievement-card">
+  <div class="achievement-icon">🏆</div>
+  <div class="achievement-body">
+    <p class="achievement-title">Rank #49 — B1T Jam 2</p>
+    <p class="achievement-desc">Placed 49th out of hundreds of entries in a competitive game jam, 2025.</p>
+  </div>
+  <a href="YOUR_CERT_LINK_HERE" target="_blank" class="cert-btn">View cert</a>
+</div>
+    <div class="achievement-card">
+  <div class="achievement-icon">🏆</div>
+  <div class="achievement-body">
+    <p class="achievement-title">Rank #49 — B1T Jam 2</p>
+    <p class="achievement-desc">Placed 49th out of hundreds of entries in a competitive game jam, 2025.</p>
+  </div>
+  <a href="YOUR_CERT_LINK_HERE" target="_blank" class="cert-btn">View cert</a>
+</div>
+<div class="achievement-card">
+  <div class="achievement-icon">🏆</div>
+  <div class="achievement-body">
+    <p class="achievement-title">Rank #49 — B1T Jam 2</p>
+    <p class="achievement-desc">Placed 49th out of hundreds of entries in a competitive game jam, 2025.</p>
+  </div>
+  <a href="YOUR_CERT_LINK_HERE" target="_blank" class="cert-btn">View cert</a>
+</div>
+    <div class="achievement-card">
+  <div class="achievement-icon">🏆</div>
+  <div class="achievement-body">
+    <p class="achievement-title">Rank #49 — B1T Jam 2</p>
+    <p class="achievement-desc">Placed 49th out of hundreds of entries in a competitive game jam, 2025.</p>
+  </div>
+  <a href="YOUR_CERT_LINK_HERE" target="_blank" class="cert-btn">View cert</a>
+</div>
+<div class="achievement-card">
   <div class="achievement-icon">🏆</div>
   <div class="achievement-body">
     <p class="achievement-title">Rank #49 — B1T Jam 2</p>
@@ -88,12 +128,12 @@
 <hr class="divider">
 
 <section class="websites-section">
-    <h2>Websites</h2>
-    <div class="web-button-row">
-        <button class="sq-btn" onclick="window.location.href='https://jdparay.github.io/FreshSense';">FreshSense</button>
-        <button class="sq-btn" onclick="window.location.href='https://jdparay.github.io/M1FA3';">M1 F3</button>
-        <button class="sq-btn" onclick="window.location.href='https://api-website-summative-paray.vercel.app';">Free2Play</button>
-        <button class="sq-btn" onclick="window.location.href='https://mages-and-cards-course-project.vercel.app';">Mages & Cards</button>
+    <h2>Other projects</h2>
+    <div class="web-chip-row">
+        <a class="web-chip" href="https://jdparay.github.io/FreshSense" target="_blank">FreshSense</a>
+        <a class="web-chip" href="https://jdparay.github.io/M1FA3" target="_blank">M1 F3</a>
+        <a class="web-chip" href="https://api-website-summative-paray.vercel.app" target="_blank">Free2Play</a>
+        <a class="web-chip" href="https://mages-and-cards-course-project.vercel.app" target="_blank">Mages & Cards</a>
     </div>
 </section>
 
@@ -101,14 +141,12 @@
 
 <script>
     function showSection(sectionId) {
-        // Hide all
         document.getElementById('achievements').style.display = 'none';
         document.getElementById('projects').style.display = 'none';
-        
-        // Show selected
-        document.getElementById(sectionId).style.display = 'block';
 
-        // Toggle button states
+        const el = document.getElementById(sectionId);
+        el.style.display = sectionId === 'achievements' ? 'grid' : 'block';
+
         document.getElementById('btn-ach').classList.toggle('active', sectionId === 'achievements');
         document.getElementById('btn-proj').classList.toggle('active', sectionId === 'projects');
     }
